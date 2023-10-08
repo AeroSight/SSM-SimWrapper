@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message ActuatorCommands {
+  repeated float actuator_commands = 1;
+}
+
+service VehicleController {
+  rpc set_actuators(ActuatorCommands) returns (ActuatorCommands) {}
+}
